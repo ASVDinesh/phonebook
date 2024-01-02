@@ -51,9 +51,10 @@ Phonebook::~Phonebook() {
 void Phonebook::add_contact(Contact contact) {
     if (!is_valid_email(contact.email)) {
         cout << "Invalid email format. Contact not added." << endl;
+
         return;
     }
-
+    cout << "Contact added"<<endl;
     root = insert(root, contact);
 }
 
